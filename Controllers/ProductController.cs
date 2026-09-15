@@ -7,9 +7,9 @@ namespace WebApiIntroExercises.Controllers;
 public class ProductController : ControllerBase
 {
     [HttpGet("description")]
-    public string GetDescription()
+    public string GetDescription(string name = "Gaming Computer", int quantity = 2)
     {
-        return "Product: Gaming Computer, Quantity: 2";
+        return $"Product: {name}, Quantity: {quantity}";
     }
 
 }
